@@ -30,9 +30,41 @@ end
 
 
 
+describe "My Transpose" do
+    subject(:arr) do
+        [[0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8]
+    ]
+    end
+    it "Should accept an array" do
+        expect {my_transpose(arr)}.to_not raise_error
+    end
+
+    it  "Should convert between the row-oriented and column-oriented representations" do
+        expect(my_transpose(arr)).to eq( [[0, 3, 6],
+                                          [1, 4, 7],
+                                          [2, 5, 8]])
+    end
+end
 
 
+describe "Stock Picker" do
+    subject(:arr) {[300, 200, 400, 500, 400, 800, 200]}
 
+    it "Should accept an array" do
+        expect {my_transpose(arr)}.to_not raise_error
+    end
+
+    it "Should return the most profitable pair of days on which to first buy the stock and then sell the stock" do
+        expect(stock_picker(arr)).to eq([1,5])
+    end
+end
+
+describe "Towers of Hanoi"
+
+
+end
 
 
 
